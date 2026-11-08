@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080816;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #251052 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #062d39 0%, transparent 35%),
+    #080816;
+  padding: 18px;
+}
+
+.header {
+  max-width: 1100px;
+  margin: auto;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #34304f;
+  border-radius: 18px;
+  background: #111122;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff00cc, #3333ff, #00eaff);
+  box-shadow: 0 0 20px #6d32ff;
+}
+
+.header h1 {
+  font-size: 19px;
+}
+
+.header p {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 17px;
+  background: linear-gradient(100deg, #a000ff, #007bff);
+  font-weight: bold;
+}
+
+button:hover {
+  box-shadow: 0 0 18px #8c36ff;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero {
+  margin-top: 25px;
+  padding: 45px 20px;
+  text-align: center;
+  border: 1px solid #38305b;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #17102d, #101b30);
+}
+
+.hero span {
+  color: #00eaff;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin: 18px 0 12px;
+  text-shadow: 0 0 15px #a000ff;
+}
+
+.hero p {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+.rgb-line {
+  height: 3px;
+  margin-top: 25px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff00cc, #00eaff, #aaff00, #ff00cc);
+  background-size: 300% 100%;
+  animation: rgb 4s linear infinite;
+}
+
+@keyframes rgb {
+  to {
+    background-position: 300% 0;
+  }
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.tab {
+  white-space: nowrap;
+  background: #17172c;
+  border: 1px solid #383854;
+}
+
+.tab.active {
+  background: linear-gradient(100deg, #a000ff, #007bff);
+  box-shadow: 0 0 15px #7135ff;
+}
+
+.content-section,
+.admin-form,
+.login-box {
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid #353550;
+  border-radius: 18px;
+  background: #111122;
+}
+
+.content-section h2,
+.admin-form h2,
+.login-box h2 {
+  margin-bottom: 18px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid #454565;
+  border-radius: 10px;
+  background: #090919;
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00d9ff;
+  box-shadow: 0 0 10px #00d9ff55;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.item-card {
+  padding: 20px;
+  border-radius: 14px;
+  background: #19192e;
+  border: 1px solid #393956;
+  overflow-wrap: anywhere;
+}
+
+.item-card h3 {
+  color: #00eaff;
+  margin-bottom: 12px;
+}
+
+.item-card p {
+  color: #ddd;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card-actions button {
+  padding: 8px 14px;
+}
+
+footer {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+footer h3 {
+  color: white;
+  margin: 15px 0 8px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+
+  .header {
+    padding: 12px;
+  }
+
+  .header h1 {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero {
+    padding: 35px 14px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+  .content-section,
+  .admin-form,
+  .login-box {
+    padding: 16px;
+  }
+}
